@@ -85,8 +85,8 @@ nav {
     animation: slideInRight 1.5s ease-out;
 }
 
+/* Call-to-Action Button */
 .cta-btn {
-    margin-top: 1em;
     animation: bounceIn 2s ease-out;
 }
 
@@ -126,6 +126,7 @@ nav {
     color: #FFD700;
 }
 
+/* Gallery Section */
 .gallery {
     display: flex;
     flex-direction: column;
@@ -244,6 +245,53 @@ footer .social-links a:hover {
 @keyframes bounceIn {
     from { transform: scale(0.3); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
+}
+
+/* Mobile-Specific Styles */
+@media (max-width: 480px) {
+    .cta-btn {
+
+        width: auto; /* Set the width to auto so it doesn't stretch full width */
+        padding: 0.5em 1em; /* Adjust padding to match the phone number button */
+        font-size: 1em; /* Adjust font size for consistency */
+        text-align: center; /* Ensure the text is centered */
+        box-sizing: border-box;
+        margin: 1em auto; /* Center the button with auto margins */
+        display: inline-block;
+    }
+
+    .contact form input, .contact form textarea {
+        padding: 0.5em;
+        font-size: 0.9em;
+    }
+
+    .contact form {
+        width: 90%;
+        margin: auto;
+    }
+
+    .contact button {
+        padding: 0.8em 1em;
+        font-size: 1em;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    .why-choose-us .features {
+        align-items: stretch;
+    }
+
+    .gallery img {
+        max-width: 100%;
+    }
 }
 
 /* Tablet Styles */
