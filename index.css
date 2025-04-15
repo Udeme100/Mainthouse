@@ -236,17 +236,65 @@ a {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.contact-form form {
-    max-width: 50em;
-    margin: 1rem auto;
+.contact-form {
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    min-height: auto;
+    background-color: #f9f9f9;
     text-align: center;
-    margin-bottom: 5em;
 }
 
-.contact-form .input-box {
+.contact-form form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+    /*margin-bottom: 5em; i did not touch this one from the last edit*/
+}
+
+.contact-form h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 10px; /* Reduced top margin */
+    margin-bottom: 10px; /* Reduced space below heading */
+    color: #333;
+}
+.contact-form h2 span {
+    color: #007BFF;
+}
+
+.input-box {
     width: 100%;
-    padding: 32px;
-    margin: 10px;
+    /*padding: 32px;
+    margin: 10px;*/
+}
+
+.input-container {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0; /* Reduced spacing between inputs */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    height: auto;
+    min-height: 80vh; /* Ensure it takes up a reasonable viewport height */
+}
+
+.contact-form form {
+    width: 90%; /* Responsive width for both mobile and desktop */
+    max-width: 600px; /* Limit maximum width on larger screens */
+    margin: 0 auto; /* Center the form container */
+    text-align: left; /* Align inputs properly */
 }
 
 .contact-form .input-container {
@@ -257,20 +305,19 @@ a {
 }
 
 .submit-button {
+    width: 100%;
     background-color: #FFD700;
-    color: #333;
-    padding: 10px 20px;
+    padding: 12px;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     font-size: 1rem;
-    font-weight: bold;
     cursor: pointer;
-    transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .submit-button:hover {
     background-color: #FFC107;
-    transform: scale(1.05);
 }
 
 /* Footer Styles */
@@ -356,29 +403,28 @@ a {
     }
 
     .contact-form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh; /* Full viewport height */
-        padding: 20px; /* Adjust padding for better spacing */
+        padding: 10px;
     }
 
     .contact-form h2 {
-        text-align: center; /* Center "Contact Us" on mobile */
+        font-size: 1.8rem; /* Slightly smaller font size for mobile */
     }
 
-    .input-box {
-        width: 100%; /* Full width on smaller screens */
-        max-width: 400px; /* Limit the form width */
+
+    .contact-form form {
+        width: 100%;
+        padding: 0 10px; /* Add some padding for better alignment */
     }
 
     .input-container {
-        width: 100%; /* Make inputs full width */
+        padding: 10px; /* Adjust padding for smaller screens */
+        font-size: 0.9rem; /* Slightly smaller font size */
     }
 
+
     .submit-button {
-        width: 100%; /* Full-width button on mobile */
+        padding: 10px;
+        font-size: 1rem;
     }
 }
 
