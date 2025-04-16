@@ -1,8 +1,19 @@
 /* Global Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #333;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    overflow-x: hidden; /* <== This stops white space from showing */
+       
 }
 
 img {
@@ -131,6 +142,11 @@ a {
     padding: 10px 0;
     animation: scroll-text 10s linear infinite;
 }
+.cta-scroller-wrapper {
+    overflow: hidden;
+    width: 100%;
+  }
+  
 
 @keyframes scroll-text {
     0% { transform: translateX(100%); }
@@ -193,7 +209,6 @@ a {
 }
 
 /* Service Gallery Section */
-/* Service Gallery Section */
 .service-gallery {
     background: linear-gradient(120deg, #E0FFB3, #FFFD99);
     padding: 50px 20px;
@@ -249,7 +264,7 @@ a {
     max-width: 400px;
     margin: 0 auto;
     text-align: left;
-    /*margin-bottom: 5em; i did not touch this one from the last edit*/
+
 }
 
 .contact-form h2 {
@@ -265,8 +280,7 @@ a {
 
 .input-box {
     width: 100%;
-    /*padding: 32px;
-    margin: 10px;*/
+   
 }
 
 .input-container {
@@ -426,11 +440,4 @@ a {
         padding: 10px;
         font-size: 1rem;
     }
-}
-
-    /*.gallery-item {
-        width: 50%;
-    }
-
-    
 }
