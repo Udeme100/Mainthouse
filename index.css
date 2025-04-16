@@ -334,6 +334,58 @@ a {
     background-color: #FFC107;
 }
 
+/* About Us Page */
+/* About Us Page with Background Image */
+.about-us {
+    background: url('yellow\ background\ and\ other\ things.jpg') no-repeat center center/cover; /* Replace 'your-image.jpg' with the actual image file */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+}
+
+.about-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.about-header p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0 auto 40px;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.5); /* Add a translucent background for readability */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.our-vision h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.our-vision p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.5); /* Add a translucent background for readability */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+
+/* Optional: Add styles for any content inside the section */
+.background-image-section h2 {
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
 /* Footer Styles */
 .footer {
     background-color: blue; /* Blue background */
