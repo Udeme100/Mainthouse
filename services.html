@@ -1,17 +1,41 @@
-<div class="top-bar">
-    <img src="images/logo.png" alt="Logo" class="logo">
-    <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
-    <ul class="desktop-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about-us.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about-us.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </div>
-      
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Mainthouse Cleaners</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <!-- Services Header Section -->
+  <section class="services-header">
+    <h1>Services</h1>
+    <p>When We Say Clean, We Mean Immaculate</p>
+  </section>
+
+  <!-- Services Card Section -->
+  <section class="card-container">
+    <div class="card">
+      <img src="/images/kitchen-clean.jpg" alt="Residential Cleaning">
+      <h2>Residential Cleaning</h2>
+      <p>we offer deep, routine move-in/out cleaning</p>
+      <p class="duration">3 hr</p>
+      <p class="pricing">Negotiable</p>
+    </div>
+  </section>
+
+  <!-- Floating Chat Button -->
+  <button class="chat-button" aria-label="Chat">
+    <svg fill="currentColor" viewBox="0 0 20 20">
+      <path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v9a2 2 0 01-2 2H6l-4 4V5z"/>
+    </svg>
+  </button>
+  <div id="footer-placeholder"></div>
+
+    <script src="index.js"></script>
+</body>
+</html>

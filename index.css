@@ -431,6 +431,118 @@ a {
     font-size: 0.9rem;
 }
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mainthouse Cleaners - Services</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+    }
+
+    /* Services Header */
+    .services-header {
+      background: linear-gradient(to right, #1e3a8a, #3b82f6, #d9f99d);
+      color: white;
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+
+    .services-header h1 {
+      font-size: 36px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .services-header p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    /* Card Section */
+    .card-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      max-width: 350px;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .card img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .card h2 {
+      font-size: 24px;
+      color: #1e40af;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .card .duration {
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+      margin-top: 10px;
+    }
+
+    .card .pricing {
+      font-style: italic;
+      color: #777;
+    }
+
+    /* Chat Button */
+    .chat-button {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background-color: #2563eb;
+      border: none;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .chat-button:hover {
+      background-color: #1d4ed8;
+    }
+
+    .chat-button svg {
+      width: 24px;
+      height: 24px;
+    }
+  
+
+
+
 /* Responsive Design */
 /* Mobile-Specific Styles */
 
