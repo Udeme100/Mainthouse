@@ -20,3 +20,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    includeHTML("header.html", "header-placeholder");
+    includeHTML("footer.html", "footer-placeholder");
+  });
+  
+  function includeHTML(file, elementId) {
+    fetch(file)
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById(elementId).innerHTML = data;
+      })
+      .catch(err => console.error(`Error loading ${file}:`, err));
+  }
+  

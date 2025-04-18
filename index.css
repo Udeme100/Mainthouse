@@ -43,7 +43,7 @@ a {
 }
 
 .logo {
-    width: 50px;
+    width: 65px;
 }
 
 .hamburger-menu {
@@ -492,4 +492,9 @@ a {
         padding: 10px;
         font-size: 1rem;
     }
+    .mobile-menu ul li a {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
 }
