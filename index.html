@@ -1,116 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mainthouse Cleaners</title>
-    <link rel="stylesheet" href="index.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mainthouse Cleaners</title>
+  <link rel="stylesheet" href="index.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <style>
+    /* Add this to your CSS file if not already there */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body>
-    <!-- Landing Page Section -->
-    <section class="landing-page">
-        <body>
-            <!-- Header will be loaded here -->
-            <div id="header-placeholder"></div>
 
-        <div class="mobile-menu" id="mobileMenu">
-            <ul>
-                <li><a href="about-us.html" onclick="toggleMenu()">About Us</a></li>
-                <li><a href="services.html" onclick="toggleMenu()">Services</a></li>
-                <li><a href="#faq" onclick="toggleMenu()">FAQ</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-            </ul>
-        </div>
+  <!-- Header will be loaded here -->
+  <div id="header-placeholder"></div>
 
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="about-us.html" onclick="toggleMenu()">About Us</a></li>
+      <li><a href="services.html" onclick="toggleMenu()">Services</a></li>
+      <li><a href="#faq" onclick="toggleMenu()">FAQ</a></li>
+      <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+    </ul>
+  </div>
 
-        <div class="hero-content">
-            <h1>MAINTHOUSE CLEANERS</h1>
-            <p>Reliable house cleaning professionals serving Nigeria</p>
-            <button class="cta-button">Get a Quote</button>
-        </div>
-        <div class="floating-chat">
-            <a href="https://wa.me/+2347025997595" target="_blank">
-                <img src="chatss icon.png" alt="Chat Icon">
-            </a>
-        </div>
-    </section>
-
-    <!-- Call-to-Action Scroller -->
-    <div class="cta-scroller-wrapper">
-        <div class="cta-scroller">
-          Call Now on 07025997595
-        </div>
+  <!-- Landing Page Section -->
+  <section class="landing-page">
+    <div class="hero-content">
+      <h1>MAINTHOUSE CLEANERS</h1>
+      <p>Reliable house cleaning professionals serving Nigeria</p>
+      <button class="cta-button">Get a Quote</button>
     </div>
-      
 
-    <!-- Why Choose Us Section -->
-    <section class="why-choose-us">
-       
-        <div class="content">
-            <h3>WHY CHOOSE US?</h3>
-            <div class="value-propositions">
-                <div class="value" id="value-1">Certified Professional Cleaners</div>
-                <div class="value" id="value-2">Professional Laundry Service</div>
-                <div class="value" id="value-3">100% Satisfaction Guaranteed</div>
-                <div class="value" id="value-4">Quality Cleaning Products</div>
-            </div>
-            <a href="https://wa.me/2347025997595?text=Hello%2C%20I'm%20interested%20in%20your%20services.%20Please%20can%20you%20send%20me%20your%20current%20price%20list%3F%20Thank%20you" target="_blank" rel="noopener noreferrer">
-                <button class="book-now-button">Click Here to Get Our Price list</button>
-            </a>
-            
-        </div>
-    </section>
+    <div class="floating-chat">
+      <a href="https://wa.me/+2347025997595" target="_blank">
+        <img src="chatss icon.png" alt="Chat Icon">
+      </a>
+    </div>
+  </section>
 
-    <!-- Our Service Gallery Section -->
-    <section class="service-gallery">
-        <h3>Our Service Gallery</h3>
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="green soap.jpg" alt="Yellow Liquid Soap">
-            </div>
-            <div class="gallery-item">
-                <img src="yellow soap.jpg" alt="Green Multipurpose Soap">
-            </div>
-            <div class="gallery-item">
-                <img src="yellow soap.jpg" alt="Green Multipurpose Soap">
-            </div>
-            <div class="gallery-item">
-                <img src="yellow soap.jpg" alt="Green Multipurpose Soap">
-            </div>
-            <div class="gallery-item">
-                <img src="yellow soap.jpg" alt="Green Multipurpose Soap">
-            </div>
-            
-        </div>
-    </section>
+  <!-- Call-to-Action Scroller -->
+  <div class="cta-scroller-wrapper">
+    <div class="cta-scroller">
+      Call Now on 07025997595
+    </div>
+  </div>
 
-        <section class="contact-form">
-            <h2 id="contact-me">Contact <span>Us</span></h2>
-        
-            <form action="#" method="post">
-                <div class="input-box">
-                    <input type="text" placeholder="Full Name" class="input-container" required />
-                    <input type="tel" placeholder="Phone Number" class="input-container" required />
-                    <input type="email" placeholder="Email" class="input-container" required />
-                    <textarea 
-                        class="input-container" 
-                        cols="30" 
-                        rows="10" 
-                        placeholder="Any Comments?" 
-                        required>
-                    </textarea>
+  <!-- Why Choose Us Section -->
+  <section class="why-choose-us">
+    <div class="content">
+      <h3>WHY CHOOSE US?</h3>
+      <div class="value-propositions">
+        <div class="value" id="value-1">Certified Professional Cleaners</div>
+        <div class="value" id="value-2">Professional Laundry Service</div>
+        <div class="value" id="value-3">100% Satisfaction Guaranteed</div>
+        <div class="value" id="value-4">Quality Cleaning Products</div>
+      </div>
+      <a href="https://wa.me/2347025997595?text=Hello%2C%20I'm%20interested%20in%20your%20services.%20Please%20can%20you%20send%20me%20your%20current%20price%20list%3F%20Thank%20you" target="_blank" rel="noopener noreferrer">
+        <button class="book-now-button">Click Here to Get Our Price list</button>
+      </a>
+    </div>
+  </section>
 
-                </div>
-                <button type="submit" class="submit-button">Submit</button>
-                
-                </form>
-        
-        </section>
+  <!-- Our Service Gallery Section -->
+  <section class="service-gallery">
+    <h3>Our Service Gallery</h3>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="green soap.jpg" alt="Yellow Liquid Soap">
+      </div>
+      <div class="gallery-item">
+        <img src="yellow soap.jpg" alt="Green Multipurpose Soap">
+      </div>
+      <div class="gallery-item">
+        <img src="yellow soap.jpg" alt="Green Multipurpose Soap">
+      </div>
+      <div class="gallery-item">
+        <img src="yellow soap.jpg" alt="Green Multipurpose Soap">
+      </div>
+      <div class="gallery-item">
+        <img src="yellow soap.jpg" alt="Green Multipurpose Soap">
+      </div>
+    </div>
+  </section>
 
-        <div id="footer-placeholder"></div>
-           
-        
-    <script src="index.js"></script>
+  <!-- ✅ Contact Form Section (with scroll target ID) -->
+  <section class="contact-form" id="contact">
+    <h2>Contact <span>Us</span></h2>
+    <form action="#" method="post">
+      <div class="input-box">
+        <input type="text" placeholder="Full Name" class="input-container" required />
+        <input type="tel" placeholder="Phone Number" class="input-container" required />
+        <input type="email" placeholder="Email" class="input-container" required />
+        <textarea 
+          class="input-container" 
+          cols="30" 
+          rows="10" 
+          placeholder="Any Comments?" 
+          required></textarea>
+      </div>
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer will be loaded here -->
+  <div id="footer-placeholder"></div>
+  <button id="backToTop" class="back-to-top" title="Go to top">&#8679;</button>
+
+
+  <script src="index.js"></script>
 </body>
 </html>
