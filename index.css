@@ -5,13 +5,14 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
     margin: 0;
+    padding: 0;
+    height: 100%;
     font-family: Arial, sans-serif;
     color: #333;
     margin: 0;
     font-family: Arial, sans-serif;
-    color: #333;
     overflow-x: hidden; /* <== This stops white space from showing */
        
 }
@@ -29,10 +30,16 @@ a {
 /* Landing Page Styles */
 .landing-page {
     background: url('background.jpg') no-repeat center center/cover;
-    height: 100vh;
+    height: 100vh; /* 100% of the viewport height */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     color: white;
     position: relative;
-    text-align: center;
 }
 
 .top-bar {
@@ -40,6 +47,12 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    width: 100%;
+    background-color: transparent; /* Ensure no background covers the landing page */
+    position: absolute; /* Keep the header at the top of the landing page */
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .logo {
@@ -59,33 +72,58 @@ a {
 }
 
 /* Mobile Menu */
+/* Mobile Menu */
+/* Mobile Menu */
 .mobile-menu {
-    display: none;
+    display: none; /* Hidden by default */
     position: fixed;
-    top: 70px;
-    right: 0;
-    width: 200px;
-    background-color: transparent;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover the entire screen width */
+    height: 100%; /* Cover the entire screen height */
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
     z-index: 1000;
-    padding: 10px;
-    border-radius: 8px;
+    flex-direction: column; /* Stack menu items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text inside the menu */
 }
 
 .mobile-menu ul {
     list-style: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
 .mobile-menu ul li {
-    margin: 10px 0;
+    margin: 20px 0; /* Space between menu items */
 }
 
 .mobile-menu ul li a {
     text-decoration: none;
-    color: #333;
+    color: white; /* White text color for better contrast */
     font-weight: bold;
+    font-size: 1.5rem; /* Larger font size for better visibility */
+    transition: color 0.3s ease;
+}
+
+.mobile-menu ul li a:hover {
+    color: #FFD700; /* Highlight color on hover */
+}
+
+/* Ensure the hamburger menu icon is visible when the menu is hidden */
+.hamburger-menu {
+    display: block; /* Always visible in mobile view */
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    z-index: 1100; /* Higher z-index than the mobile menu */
+    position: relative;
+}
+
+/* Add an overlay for smooth appearance when opened */
+.mobile-menu.active {
+    display: flex; /* Show the menu when active */
 }
 
 .hero-content {
@@ -431,18 +469,7 @@ a {
     font-size: 0.9rem;
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mainthouse Cleaners - Services</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-    }
+
 
     /* Services Header */
     .services-header {

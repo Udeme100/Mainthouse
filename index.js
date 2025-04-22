@@ -55,3 +55,29 @@ window.addEventListener("scroll", () => {
 document.getElementById("backToTop").addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
 });
+
+// JavaScript to Toggle the Mobile Menu
+function toggleMenu() {
+  const mobileMenu = document.getElementById("mobileMenu");
+  if (mobileMenu.classList.contains("active")) {
+      mobileMenu.classList.remove("active"); // Hide menu
+  } else {
+      mobileMenu.classList.add("active"); // Show menu
+  }
+}
+
+// Close the menu after clicking on a menu item
+function closeMenu() {
+  const mobileMenu = document.getElementById("mobileMenu");
+  if (mobileMenu.classList.contains("active")) {
+      mobileMenu.classList.remove("active"); // Hide menu after clicking
+  }
+}
+
+// Attach event listeners to menu items for closing the menu after selection
+document.addEventListener("DOMContentLoaded", () => {
+  const menuItems = document.querySelectorAll(".mobile-menu ul li a");
+  menuItems.forEach(menuItem => {
+      menuItem.addEventListener("click", closeMenu);
+  });
+});
