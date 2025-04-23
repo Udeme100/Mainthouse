@@ -72,8 +72,6 @@ a {
 }
 
 /* Mobile Menu */
-/* Mobile Menu */
-/* Mobile Menu */
 .mobile-menu {
     display: none; /* Hidden by default */
     position: fixed;
@@ -608,6 +606,9 @@ a {
     .desktop-menu {
         display: none;
     }
+    .mobile-menu.active {
+        display: flex; /* Show mobile menu when active */
+    }
 
     .gallery {
         display: flex;
@@ -655,6 +656,25 @@ a {
             height: 40px;
             font-size: 20px;
           }
-        
 
+    .hamburger-menu {
+        display: block; /* Show hamburger menu */
+        font-size: 24px;
+        cursor: pointer;
+    }
+    .desktop-menu {
+        display: none; /* Hide desktop menu */
+    }
+}
+
+/* Show the desktop menu on screens larger than 768px */
+@media (min-width: 769px) {
+    .desktop-menu {
+        display: flex; /* Show desktop menu */
+        gap: 20px; /* Space between menu items */
+        list-style: none;
+    }
+    .hamburger-menu {
+        display: none; /* Hide hamburger menu on larger screens */
+    }
 }

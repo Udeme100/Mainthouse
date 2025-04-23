@@ -1,7 +1,11 @@
 // Toggle mobile menu
 function toggleMenu() {
   const mobileMenu = document.getElementById("mobileMenu");
-  mobileMenu.style.display = mobileMenu.style.display === "block" ? "none" : "block";
+  if (mobileMenu.classList.contains("active")) {
+      mobileMenu.classList.remove("active"); // Hide menu
+  } else {
+      mobileMenu.classList.add("active"); // Show menu
+  }
 }
 
 // Load header and footer, then bind events
