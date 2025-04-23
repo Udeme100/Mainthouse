@@ -1,0 +1,69 @@
+.about-ceo {
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .ceo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .ceo-image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .ceo-image img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .ceo-text {
+    max-width: 800px;
+    text-align: left;
+  }
+  
+  .ceo-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  
+  .ceo-text p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  /* Responsive for larger screens */
+  @media (min-width: 768px) {
+    .ceo-container {
+      flex-direction: row;
+      align-items: flex-start;
+      text-align: left;
+    }
+  
+    .ceo-image {
+      justify-content: flex-start;
+    }
+  
+    .ceo-text {
+      padding-left: 2rem;
+    }
+  
+    .ceo-text, .ceo-image {
+      flex: 1;
+    }
+  }
+  
