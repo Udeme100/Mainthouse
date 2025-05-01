@@ -578,7 +578,7 @@ a {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 50px;
+        padding: 1000px;
         gap: 30px;
         flex-wrap: wrap; /* Wrap on smaller screens */
       }
