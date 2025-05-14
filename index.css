@@ -850,11 +850,17 @@ a {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
     
-      .review-image:hover,
-      .review-image:active {
-        transform: scale(1.05); /* Slight zoom on tap */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on tap */
-      }
+      /* Hover and Active Effect */
+.review-image:hover,
+.review-image:active {
+  transform: scale(1.1) rotate(0deg); /* Pop out and reset rotation */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover/tap */
+}
+
+/* Reset position after releasing */
+.review-image:active {
+  transition: transform 0.1s ease-out; /* Quick reset transition */
+}
 }
 /* Show the desktop menu on screens larger than 768px */
 @media (min-width: 769px) {
