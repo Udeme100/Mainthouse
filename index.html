@@ -131,18 +131,24 @@
     <h2 class="section-heading">Feedback from Happy Clients</h2>
     <p class="section-subtext">Pop out some of our conversations – proof that we show up and deliver.</p>
     <div class="review-gallery">
-      <div class="review-image img1">
+      <button class="review-image img1" data-img="New/Review _ (1).jpg" aria-label="View Screenshot 1">
         <img src="New/Review _ (1).jpg" alt="Client Feedback Screenshot 1">
-      </div>
-      <div class="review-image img2">
+      </button>
+      <button class="review-image img2" data-img="New/Review _ (2).jpg" aria-label="View Screenshot 2">
         <img src="New/Review _ (2).jpg" alt="Client Feedback Screenshot 2">
-      </div>
-      <div class="review-image img3">
+      </button>
+      <button class="review-image img3" data-img="New/Review _ (3).jpg" aria-label="View Screenshot 3">
         <img src="New/Review _ (3).jpg" alt="Client Feedback Screenshot 3">
-      </div>
-      <div class="review-image img4">
+      </button>
+      <button class="review-image img4" data-img="New/Review_2.png" aria-label="View Screenshot 4">
         <img src="New/Review_2.png" alt="Client Feedback Screenshot 4">
-      </div>
+      </button>
+    </div>
+  
+    <!-- Modal for full-screen pop out -->
+    <div id="image-modal" class="image-modal">
+      <span class="close-modal" tabindex="0" aria-label="Close">&times;</span>
+      <img src="" alt="Full Screen Review" id="modal-img" />
     </div>
   </section>
 

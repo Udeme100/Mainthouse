@@ -22,6 +22,15 @@ document.addEventListener("DOMContentLoaded", () => {
       link.setAttribute("href", isOnIndex ? "#contact" : "index.html#contact");
     });
   }, 100); // Wait a moment for the header to load in
+
+  // Review Section Modal Functionality
+  setupReviewSectionModal();
+
+  // Attach event listeners to menu items for closing the menu after selection
+  const menuItems = document.querySelectorAll(".mobile-menu ul li a");
+  menuItems.forEach(menuItem => {
+      menuItem.addEventListener("click", closeMenu);
+  });
 });
 
 function includeHTML(file, elementId, callback) {
@@ -78,10 +87,42 @@ function closeMenu() {
   }
 }
 
-// Attach event listeners to menu items for closing the menu after selection
-document.addEventListener("DOMContentLoaded", () => {
-  const menuItems = document.querySelectorAll(".mobile-menu ul li a");
-  menuItems.forEach(menuItem => {
-      menuItem.addEventListener("click", closeMenu);
+// === Review Section Modal JS ===
+function setupReviewSectionModal() {
+  // Query all review-image elements that are buttons or links
+  const reviewImages = document.querySelectorAll('.review-image');
+  const imageModal = document.getElementById('image-modal');
+  const modalImg = document.getElementById('modal-img');
+  const closeModalBtn = document.querySelector('.close-modal');
+
+  if (!imageModal || !modalImg || !closeModalBtn) return;
+
+  reviewImages.forEach(btn => {
+    btn.addEventListener('click', function() {
+      // Prefer data-img attribute, fallback to img src
+      const imgSrc = btn.getAttribute('data-img') || btn.querySelector('img').src;
+      modalImg.src = imgSrc;
+      imageModal.classList.add('active');
+      document.body.classList.add('modal-open');
+    });
   });
-});
+
+  // Close modal on close button click
+  closeModalBtn.addEventListener('click', closeModal);
+
+  // Close modal when clicking the overlay (but not the image)
+  imageModal.addEventListener('click', function(e) {
+    if (e.target === imageModal) closeModal();
+  });
+
+  // Close modal on ESC key
+  document.addEventListener('keydown', function(e) {
+    if (imageModal.classList.contains('active') && (e.key === "Escape" || e.key === "Esc")) closeModal();
+  });
+
+  function closeModal() {
+    imageModal.classList.remove('active');
+    document.body.classList.remove('modal-open');
+    modalImg.src = '';
+  }
+}
