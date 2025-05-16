@@ -125,4 +125,7 @@ function setupReviewSectionModal() {
     document.body.classList.remove('modal-open');
     modalImg.src = '';
   }
+  document.querySelector('.cta-button').addEventListener('click', function() {
+    window.location.href = 'mailto:mainthousecleaners@gmail.com?subject=Request%20for%20Quote';
+  });
 }
