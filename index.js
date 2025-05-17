@@ -122,73 +122,30 @@ function setupReviewSectionModal() {
     modalImg.src = '';
   }
   
-  document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById('contactForm');
-    const messageDiv = document.getElementById('formMessage');
-  
-    // Helper: Validate email format
-    function isValidEmail(email) {
-      // Simple regex for demonstration, use more robust if needed
-      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    }
-  
-    // Helper: Validate phone (digits, spaces, dashes, parentheses, min 7 chars)
-    function isValidPhone(phone) {
-      return /^[\d\s\-\(\)]+$/.test(phone) && phone.replace(/\D/g,"").length >= 7;
-    }
-  
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-  
-      // 1. Client-side validation
-      const name = form.name.value.trim();
-      const phone = form.phone.value.trim();
-      const email = form.email.value.trim();
-      const comments = form.comments.value.trim();
-  
-      let errorMsg = "";
-      if (!name) errorMsg = "Please enter your name.";
-      else if (!isValidPhone(phone)) errorMsg = "Enter a valid phone number (min 7 digits).";
-      else if (!isValidEmail(email)) errorMsg = "Enter a valid email address.";
-      else if (!comments) errorMsg = "Please enter your comments.";
-  
-      if (errorMsg) {
-        messageDiv.textContent = errorMsg;
-        messageDiv.style.color = "red";
-        return;
-      }
-  
-      // 2. Disable form & show loading
-      form.querySelector('.submit-button').disabled = true;
-      messageDiv.textContent = "Sending...";
-      messageDiv.style.color = "black";
-  
-      // 3. Prepare data & send
-      const data = { name, phone, email, comments };
-  
-      fetch('https://script.google.com/macros/s/AKfycbwfow9Ue0hzZsQ4kz2wR6AM10UMUHwD6IrNLkKGMyfDgADY7HKDtjEv33WfeK-YyXV9/exec', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      })
-      .then(res => res.json())
-      .then(response => {
-        console.log('Server response:', response);
-        if (response.result === "success") {
-          messageDiv.textContent = "Thank you! Your message has been sent.";
-          messageDiv.style.color = "green";
-          form.reset();
-        } else {
-          messageDiv.textContent = "Sorry, something went wrong. Please try again.";
-          messageDiv.style.color = "red";
-        }
-      })
-      .catch(() => {
-        messageDiv.textContent = "Network error. Please try again.";
-        messageDiv.style.color = "red";
-      })
-      .finally(() => {
-        form.querySelector('.submit-button').disabled = false;
-      });
-    });
+}
+
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const data = {
+    name: form.name.value,
+    phone: form.phone.value,
+    email: form.email.value,
+    comments: form.comments.value,
+  };
+
+  fetch('https://script.google.com/macros/s/AKfycbwfow9Ue0hzZsQ4kz2wR6AM10UMUHwD6IrNLkKGMyfDgADY7HKDtjEv33WfeK-YyXV9/exec', {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: { 'Content-Type': 'application/json' }
+  })
+  .then(res => res.json())
+  .then(response => {
+    document.getElementById('formMessage').innerText = "Thank you! Your message has been sent.";
+    form.reset();
+  })
+  .catch(err => {
+    document.getElementById('formMessage').innerText = "There was an error. Please try again.";
   });
+});
