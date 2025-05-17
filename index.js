@@ -65,10 +65,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-document.getElementById("backToTop").addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
-});
-
 // JavaScript to Toggle the Mobile Menu
 function toggleMenu() {
   const mobileMenu = document.getElementById("mobileMenu");
@@ -127,3 +123,29 @@ function setupReviewSectionModal() {
   }
   
 }
+
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const data = {
+    name: form.name.value,
+    phone: form.phone.value,
+    email: form.email.value,
+    comments: form.comments.value,
+  };
+
+  fetch('https://script.google.com/macros/s/AKfycbwfow9Ue0hzZsQ4kz2wR6AM10UMUHwD6IrNLkKGMyfDgADY7HKDtjEv33WfeK-YyXV9/exec', {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: { 'Content-Type': 'application/json' }
+  })
+  .then(res => res.json())
+  .then(response => {
+    document.getElementById('formMessage').innerText = "Thank you! Your message has been sent.";
+    form.reset();
+  })
+  .catch(err => {
+    document.getElementById('formMessage').innerText = "There was an error. Please try again.";
+  });
+});
